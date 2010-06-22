@@ -146,8 +146,11 @@ height:95px;
     float: left;
     margin: 10px 10px 10px 10px;   }
     h1.logo a {
+      /*
       background: url(../../images/admin/bg/spree_50.png) left center no-repeat;
       padding-left: 190px;
+      */
+      padding-left: 20px;
       display: block;
       height: 82px;
       text-decoration: none;
@@ -569,3 +572,4 @@ table#product_scopes tr td table tr td {
   text-align: right;
   margin: 0;
 }
+
