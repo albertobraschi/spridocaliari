@@ -476,6 +476,7 @@ ul#shipping-specs {
 ul#shipping-specs li {
   list-style-image:none;
   display:inline;
+  width:100%;float:left;display:block
 }
 
 .product-scopes ul > li {

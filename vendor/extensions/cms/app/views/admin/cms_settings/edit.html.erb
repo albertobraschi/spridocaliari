@@ -1,0 +1,40 @@
+<%= render :partial => 'admin/posts/sub_menu' %>
+
+<h1><%= t('cms.settings') %></h1>
+
+<% form_tag(admin_cms_settings_path, :method => :put) do -%>
+
+
+  
+  <p>
+	<label><%= t('cms.posts_per_page') %></label>
+	<%= text_field_tag('preferences[cms_posts_per_page]', Spree::Config[:cms_posts_per_page]) %>
+  </p>
+  <p>
+	<label><%= t('cms.posts_recent') %></label>
+	<%= text_field_tag('preferences[cms_posts_recent]', Spree::Config[:cms_posts_recent])%>
+  </p>	
+  
+  <p>
+  <label><%= t('cms.post_status_default') %></label>
+  <%= radio_button_tag('preferences[cms_post_status_default]', 1, Spree::Config[:cms_post_status_default]) %> <%= t("cms.publish") %>
+  <%= radio_button_tag('preferences[cms_post_status_default]', 0, Spree::Config[:cms_post_status_default] ) %> <%= t("cms.draft") %>
+  </p>
+  
+  <p>
+  <label><%= t('cms.page_status_default') %></label>
+  <%= radio_button_tag('preferences[cms_page_status_default]', 1, Spree::Config[:cms_page_status_default]) %> <%= t("cms.publish") %>
+  <%= radio_button_tag('preferences[cms_page_status_default]', 0, Spree::Config[:cms_page_status_default] ) %> <%= t("cms.draft") %>
+  </p>
+    	  
+  <p>
+  <label><%= t('cms.post_comment_default') %></label>
+  <%= radio_button_tag('preferences[cms_post_comment_default]', 1, Spree::Config[:cms_post_comment_default]) %> <%= t("cms.open") %>
+  <%= radio_button_tag('preferences[cms_post_comment_default]', 0, Spree::Config[:cms_post_comment_default] ) %> <%= t("cms.closed") %>
+  </p>
+
+  <p class="form-buttons">
+    <%= button t('update') %> 
+    <%= t("or") %> <%= link_to t("cancel"), admin_cms_settings_url %>
+  </p>
+<% end -%>

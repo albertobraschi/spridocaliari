@@ -1,0 +1,66 @@
+<div class="yui-gc">
+  <div class="yui-u first">
+    <%- locals = {:f => f} -%>
+    <% hook :admin_post_form_left, locals do %>
+      <% f.field_container :title do %>
+        <%= f.label :title, t("cms.title") %> <span class="required">*</span><br />
+        <%= f.text_field :title, :class => 'fullwidth title'  %>
+        <%= f.error_message_on :title %>
+      <% end %>
+
+      <% f.field_container :permalink do %>
+        <%= f.label :permalink, t("cms.permalink") %> <span class="required">*</span><br />
+        <%= f.text_field :permalink, :class => 'fullwidth title'  %>
+        <%= f.error_message_on :permalink %>
+      <% end %>
+
+      <% f.field_container :excerpt do %>
+        <%= f.label :excerpt, t("cms.excerpt")%><br />
+        <%= f.text_area :excerpt, {:cols => 120, :rows => 3, :class => 'fullwidth'} %>
+        <%= f.error_message_on :excerpt %>
+      <% end %>
+    
+      <% f.field_container :body_raw do %>
+        <%= f.label :body_raw, t("cms.body")%> <span class="required">*</span><br />
+        <%= f.text_area :body_raw, {:cols => 120, :rows => 4, :class => 'fullwidth'} %>
+        <%= f.error_message_on :body_raw %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="yui-u">
+    <% hook :admin_post_form_right, locals do %>
+    
+      <p>
+        <%= f.label :user_id, t("cms.author")%><br />
+        <%= f.collection_select :user_id, User.roles_name_equals("cms.admin"), :id, :display_name, {:prompt => t("cms.select_author")} %>
+        <%= f.error_message_on :user_id %>
+      </p>
+
+      <p>
+        <%= f.label :is_active, t("cms.status")%><br />
+        <%= f.radio_button :is_active, 1 %><%= t("cms.publish") %> 
+        <%= f.radio_button :is_active, 0 %><%= t("cms.draft") %>
+        <%= f.error_message_on :is_active %>
+      </p>
+      
+      <p>
+        <%= f.label :commentable, t("cms.comment_status") %>: <%= f.radio_button :commentable, 1 %><%= t("cms.open") %> <%= f.radio_button :commentable, 0 %><%= t("cms.closed") %>
+      </p>    
+      <p>
+        <%= f.label :tag_list, "#{t('cms.tags')} (#{t('cms.tags_hint')}):" %> <br/> <%= f.text_field :tag_list %>
+      </p>
+      
+      <h2><%= t("cms.metadata") %></h2>
+      <% hook :admin_page_form_meta, locals do %>
+        <p>
+          <%= f.label :meta_keywords, t("cms.meta_keywords")%><br />
+          <%= f.text_field :meta_keywords, :class => 'fullwidth' %>
+        </p>
+        <p>
+          <%= f.label :meta_description, t("cms.meta_description")%><br />
+          <%= f.text_field :meta_description, :class => 'fullwidth' %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+</div>

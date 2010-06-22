@@ -1,0 +1,42 @@
+<%= render :partial => 'admin/posts/sub_menu' %>
+
+<h1><%= t("cms.settings") %></h1>
+
+<table>
+  <tr>
+    <th scope="row"><%= t("cms.permalink") %>:</th> 
+    <td><%=  Spree::Config[:cms_permalink] %></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t("cms.posts_per_page") %>:</th> 
+    <td><%=  Spree::Config[:cms_posts_per_page] %></td>
+  </tr>
+  <tr>
+    <th scope="row"><%= t("cms.posts_recent") %>:</th> 
+    <td><%=  Spree::Config[:cms_posts_recent] %></td>
+  </tr>
+
+  <tr>
+    <th scope="row"><%= t("cms.post_status_default") %>:</th> 
+    <td><%= (Spree::Config[:cms_post_status_default] ? t("cms.publish") : t("cms.draft")) %></td>
+  </tr>
+  
+  <tr>
+    <th scope="row"><%= t("cms.page_status_default") %>:</th> 
+    <td><%= (Spree::Config[:cms_page_status_default] ? t("cms.publish") : t("cms.draft")) %></td>
+  </tr>
+  
+  <tr>
+    <th scope="row"><%= t("cms.post_comment_default") %>:</th> 
+    <td><%= (Spree::Config[:cms_post_comment_default] ? t("cms.open") : t("cms.closed")) %>
+</td>
+  </tr>
+  
+  
+  
+
+</table>
+
+<p><%= link_to_with_icon 'edit', t("edit"), edit_admin_cms_settings_path %></p>
+
+

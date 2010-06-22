@@ -1,0 +1,22 @@
+---
+pt-BR:
+  email_to_friend:
+    send_to_friend: "Enviar para um amigo"
+    tell_about: "Enviar para um amigo"
+    sender_name: "Seu nome"
+    sender_email: "Seu endereço de email"
+    recipient_name: "Nome do seu amigo"
+    recipient_email: "Endereço de email do seu amigo"
+    message: "Mensagem"
+    send_message: "Enviar"
+    mail_sent_to: "Email enviado para {{email}} "
+    send_to_other: "Enviar um novo email"
+    you_would_like_this: "Acho que você gostará deste produto"
+
+  captcha:
+    captcha_settings: "Captcha Settings"
+    public_key: "Public key"
+    private_key: "Private key"
+    manage_keys: "Manage your (re)captcha keys"
+    theme: "Theme"
+

@@ -1,0 +1,51 @@
+<div class="yui-gc">
+  <div class="yui-u first">
+    <%- locals = {:f => f} -%>
+    <% hook :admin_page_form_left, locals do %>
+      <% f.field_container :title do %>
+        <%= f.label :title, t("cms.title") %> <span class="required">*</span><br />
+        <%= f.text_field :title, :class => 'fullwidth title'  %>
+        <%= f.error_message_on :title %>
+      <% end %>
+
+      <% f.field_container :permalink do %>
+        <%= f.label :permalink, t("cms.permalink") %> <span class="required">*</span><br />
+        <%= f.text_field :permalink, :class => 'fullwidth title'  %>
+        <%= f.error_message_on :permalink %>
+      <% end %>
+
+      <% f.field_container :body_raw do %>
+        <%= f.label :body_raw, t("cms.body")%><br />
+        <%= f.text_area :body_raw, {:cols => 60, :rows => 4, :class => 'fullwidth'} %>
+        <%= f.error_message_on :body_raw %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="yui-u">
+    <% hook :admin_page_form_right, locals do %>
+    
+      <p>
+        <%= f.label :is_active, t("cms.status")%><br />
+
+        <%= f.radio_button :is_active, 1 %><%= t("cms.publish") %> 
+        <%= f.radio_button :is_active, 0 %><%= t("cms.draft") %>
+        <%= f.error_message_on :is_active%>
+      </p>
+      <h2><%= t("metadata") %></h2>
+      <% hook :admin_page_form_meta, locals do %>
+        <p>
+          <%= f.label :meta_keywords, t("cms.meta_keywords")%><br />
+          <%= f.text_field :meta_keywords, :class => 'fullwidth' %>
+        </p>
+        <p>
+          <%= f.label :meta_description, t("cms.meta_description")%><br />
+          <%= f.text_field :meta_description, :class => 'fullwidth' %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

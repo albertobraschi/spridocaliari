@@ -1,0 +1,60 @@
+# Logfile created on Tue Jun 22 19:22:10 -0300 2010
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-22 19:22:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+
+NoMethodError (undefined method `visible' for #<Class:0xb63c8ce4>):
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/conditions.rb:69:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_conditions.rb:19:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_ordering.rb:27:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/ordering.rb:30:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/or_conditions.rb:24:in `method_missing'
+  /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+  vendor/extensions/static_content/static_content_extension.rb:28:in `render_page_if_exists'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-22 19:22:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+
+NoMethodError (undefined method `visible' for #<Class:0xb63c8ce4>):
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/conditions.rb:69:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_conditions.rb:19:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_ordering.rb:27:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/ordering.rb:30:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/or_conditions.rb:24:in `method_missing'
+  /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+  vendor/extensions/static_content/static_content_extension.rb:28:in `render_page_if_exists'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-22 19:23:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+
+NoMethodError (undefined method `visible' for #<Class:0xb63c8ce4>):
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/conditions.rb:69:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_conditions.rb:19:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_ordering.rb:27:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/ordering.rb:30:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/or_conditions.rb:24:in `method_missing'
+  /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+  vendor/extensions/static_content/static_content_extension.rb:28:in `render_page_if_exists'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-06-22 19:23:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"home"}
+
+NoMethodError (undefined method `visible' for #<Class:0xb63c8ce4>):
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/conditions.rb:69:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_conditions.rb:19:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/association_ordering.rb:27:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/ordering.rb:30:in `method_missing'
+  searchlogic (2.3.5) lib/searchlogic/named_scopes/or_conditions.rb:24:in `method_missing'
+  /usr/lib/ruby/gems/1.8/gems/will_paginate-2.3.11/lib/will_paginate/finder.rb:170:in `method_missing'
+  vendor/extensions/static_content/static_content_extension.rb:28:in `render_page_if_exists'
+
+Rendering rescues/layout (internal_server_error)

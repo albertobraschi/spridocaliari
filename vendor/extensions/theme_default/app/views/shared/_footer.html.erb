@@ -1,12 +1,11 @@
 <div id="footer">
-  <div class="left">
-  <!--
-    <% hook :footer_left do -%>
-    <p>
-      <%= t("powered_by") %> <a href="http://spreecommerce.com/">Spree</a>
-    </p>
-    <% end -%>
-    -->
+  <div class="center">
+ <ul>
+    <% for page in Page.header_links do %>
+      <li><%= link_to page.title, page.link %></li>
+    <% end %>
+  </ul>
+
   </div>
   <div class="right">
     <%= hook :footer_right %>

@@ -48,6 +48,7 @@ Spree::Initializer.run do |config|
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
   config.plugins = [ :all, :resource_controller, :extension_patches ]
 
+
   # Define SPREE_EXTENSIONS_LOAD_ORDER in config/preinitializer.rb if you want to
   # specify a custom extension load order.  You may have to create preinitializer.rb
   # yourself, this is an optional Spree file. For example:
@@ -64,7 +65,7 @@ Spree::Initializer.run do |config|
   # Make Time.zone default to the specified zone, and make Active Record store time values
   # in the database in UTC, and return them converted to the specified local zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
-  config.time_zone = "Eastern Time (US & Canada)"
+  config.time_zone = "Brasilia"
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -78,7 +79,7 @@ Spree::Initializer.run do |config|
   # The internationalization framework can be changed to have another default locale (standard is :en) or more load paths.
   # All files from config/locales/*.rb,yml are added automatically.
   #config.i18n.load_path << Dir[File.join(RAILS_ROOT, 'my', 'locales', '*.{rb,yml}')]
-  config.i18n.default_locale = :'en'
+  config.i18n.default_locale = :'pt-BR'
 
 end
 

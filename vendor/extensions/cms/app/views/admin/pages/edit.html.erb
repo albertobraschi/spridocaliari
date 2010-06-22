@@ -1,0 +1,7 @@
+<h1><%= t("cms.editing_page") + " &ldquo;#{@page.title}&rdquo;" %></h1>
+
+<% form_for(@page, :url => object_url, :html => { :method => :put, :multipart => true }) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= render :partial => 'admin/shared/edit_resource_links' %>
+<% end %>
+

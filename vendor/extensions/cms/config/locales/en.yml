@@ -1,0 +1,48 @@
+---
+en:
+    post: Post
+    posts: Posts
+    page: Page
+    pages: Pages
+    cms:
+      date: Date
+      published_date_range: Published Date Range
+      show_only_published_pages: Show Only Published Pages
+      show_only_published_posts: Show Only Published Posts
+      editing_post: Editing Post
+      editing_page: Editing Page
+      comma_separated: Comma Separated
+      select_author: Select Author
+      comment: Comment
+      comments: Comments
+      comments_closed: Comments are closed
+      recent_posts: Recent Posts
+      new_post: New Post
+      view: View
+      title: Title
+      permalink: Permalink
+      body: Body
+      excerpt: Excerpt
+      author: Author
+      publish_post: Publish Post
+      comment_status: Comment Status
+      tags: Tags
+      tags_hint: Enter tags separated by a comma
+      settings: Blog Settings
+      permalink: Slug used in url to blog home
+      posts_per_page: Posts displayed on blog home
+      posts_recent: Posts listed in recent post lists
+      post_status_default: Status default for new posts
+      page_status_default: Status default for new pages
+      post_comment_default: Comment status default for new posts
+      publish: Publish
+      published: Published    
+      draft: Draft
+      open: Open
+      closed: Closed
+      view_blog: View Blog
+      blog: Blog
+      comments_for: comments for
+      recent: Recent
+      no_posts_found: No posts found
+      new_page: New Page

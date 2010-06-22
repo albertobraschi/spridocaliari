@@ -1,0 +1,9 @@
+<%= render :partial => 'sub_menu' %>
+
+<h1><%= t("cms.editing_post") + " &ldquo;#{@post.title}&rdquo;" %></h1>
+
+<% form_for(@post, :url => object_url, :html => { :method => :put, :multipart => true }) do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= render :partial => 'admin/shared/edit_resource_links' %>
+<% end %>
+

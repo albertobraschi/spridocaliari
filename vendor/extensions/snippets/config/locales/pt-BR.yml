@@ -1,0 +1,9 @@
+---
+pt-BR:
+  snippets: "Bloco estático"
+  snippets_desc: "Manage snippets with WYM editor."
+  snippets_slug: "Identificador"
+  snippets_content: "Conteúdo"
+  new_snippet: "Novo bloco estático"
+  editing_snippet: "Editar bloco estático"
+

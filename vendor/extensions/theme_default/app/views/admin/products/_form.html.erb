@@ -54,19 +54,19 @@
         <% end %>
         <ul id="shipping-specs">
           <li>
-            <%= f.label :weight, t("weight")%>
+            <%= f.label :weight, t("weight")%><br />
             <%= f.text_field :weight, :size => 4 %>
           </li>
           <li>
-            <%= f.label :height, t("height")%>
+            <%= f.label :height, t("height")%><br />
             <%= f.text_field :height, :size => 4 %>
           </li>
           <li>
-            <%= f.label :width, t("width")%>
+            <%= f.label :width, t("width")%><br />
             <%= f.text_field :width, :size => 4 %>
           </li>
           <li>
-            <%= f.label :depth, t("depth")%>
+            <%= f.label :depth, t("depth")%><br />
             <%= f.text_field :depth, :size => 4 %>
           </li>
         </ul>
@@ -104,3 +104,4 @@
     <%= render :partial => "admin/shared/additional_field", :locals => {:field => field, :f => f} %>
   <% end %>
 <% end %>
+

@@ -1,0 +1,14 @@
+<% content_for :head do %>
+  <link rel="alternate" type="application/rss+xml" title="<%= t("posts") %> RSS" href="<%= posts_url(:format => 'rss') %>" />
+<% end %>   
+   
+<%= render :partial => 'shared/cms_content_for'%>
+
+
+<div class="posts">
+  <% for post in @posts %>
+  	<%= render :partial => post %>
+  <% end %>
+  
+  <%= will_paginate(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") %>
+</div>

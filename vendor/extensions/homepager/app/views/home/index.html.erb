@@ -1,0 +1,17 @@
+  <% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "shared/filters" %>
+  <% else %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>
+  <% content_for :head do %>
+<link rel="stylesheet" type="text/css" href="/slider/css/screen.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>
+<script type="text/javascript" src="/slider/js/slider.js" ></script>
+<script type="text/javascript">jQuery(document).ready(function(){jQuery("#slider").easySlider({auto: false,continuous: true});});</script>
+  <% end %>
+    <%= render_snippet('slider') %>
+    <%= render_snippet('bloco-lateral') %>
+<%= render "shared/products", :products => @products, :taxon => @taxon %>
+
