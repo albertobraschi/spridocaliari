@@ -1,0 +1,32 @@
+<% content_for :page_title do %>
+	<%= 'Fale Conosco' %>
+<% end %>
+
+<h1 class="form">Fale Conosco</h1>
+<script type="text/javascript">
+	Cufon.replace('h1.form');
+</script>
+
+<%= error_messages_for :inquiry %>
+<div class="generic_form contact">
+	<% form_for(:inquiry, :url => collection_url) do |f| %>
+	  <p><%= f.label :name, "Seu nome" %><br />
+		   <%= f.text_field :name, :class => 'required' %>
+		</p>
+		<p><%= f.label :email, "Seu endereço de email" %><br />
+		   <%= f.text_field :email, :class => 'required email' %>
+		</p>
+		<p><%= f.label :message, "Mensagem" %><br />
+		   <%= f.text_area :message, :class => 'required' %>
+		</p>
+	  <p>
+	    <%= submit_tag "Enviar" %>
+	  </p>
+	<% end %>
+	<script>
+	  $(document).ready(function(){
+	    $(".generic_form form").validate();
+	  });
+	  </script>
+</div>
+

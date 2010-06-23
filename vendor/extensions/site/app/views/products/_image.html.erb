@@ -1,0 +1,6 @@
+<% if image %>
+  <%= link_to (image_tag image.attachment.url(:product)), image.attachment.url(:large) %>
+<% else %>
+  <%= link_to product_image(@product),@product.images.first.attachment.url(:original), :class=>"highslide", :onclick=>"return hs.expand(this)" %>
+<% end %>
+

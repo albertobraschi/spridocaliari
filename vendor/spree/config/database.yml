@@ -1,0 +1,24 @@
+# Default database configuration
+
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000  
+
+# development:
+#   adapter: mysql
+#   database: spree_dev
+#   username: root
+#   pool: 5
+#   timeout: 5000  
+
+#   
+# test:
+#   adapter: mysql
+#   database: spree_test
+#   username: root  
+#   
+# cucumber:
+#   adapter: sqlite3
+#   database: db/test.sqlite3  

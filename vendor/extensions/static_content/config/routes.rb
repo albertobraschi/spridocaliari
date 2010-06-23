@@ -2,5 +2,6 @@
 
 map.namespace :admin do |admin|
   admin.resources :pages
-end 
-map.static '/static/*path', :controller => 'static_content', :action => 'show'
+end
+map.static '/static/*path', :controller => 'content', :action => 'show'
+

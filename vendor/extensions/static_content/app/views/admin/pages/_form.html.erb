@@ -40,10 +40,12 @@
     <td valign="top"><%=t("ext_static_content_body")%>:</td>
     <td><%= f.text_area :body, {"style" => "width:500px", "class"=> "wymeditor"} %> </td>
   </tr>
+  <!--
   <tr>
     <td valign="top"><%=t("ext_static_content_foreign_link")%>:</td>
     <td><%= f.text_field :foreign_link, {"style" => "width:500px"} %></td>
   </tr>
+  -->
   <tr>
     <td valign="top"><%=t("ext_static_content_meta_keywords")%>:</td>
     <td><%= f.text_field :meta_keywords, {"style" => "width:500px"} %></td>
@@ -60,6 +62,7 @@
     <td valign="top"><%=t("ext_static_content_show_in_footer")%>:</td>
     <td><%= f.check_box :show_in_footer %></td>
   </tr>
+  <!--
   <tr>
     <td valign="top"><%=t("ext_static_content_position")%>:</td>
     <td><%= f.text_field :position %></td>
@@ -68,8 +71,10 @@
     <td valign="top"><%=t("ext_static_content_layout")%>:</td>
     <td><%= f.text_field :layout %></td>
   </tr>
+  -->
   <tr>
     <td valign="top"><%=t("ext_static_content_visible")%>:</td>
     <td><%= f.check_box :visible %></td>
   </tr>
 </table>
+

@@ -74,7 +74,7 @@ pt-BR:
         total: Total
       product:
         available_on: "Disponível em"
-        cost_price: "Cost Price"
+        cost_price: "Preço Promocional"
         description: Descrição
         master_price: "Preço Mestre"
         name: Nome
@@ -161,8 +161,8 @@ pt-BR:
         one: Produto
         other: Produtos
       product_group:
-        one: "Product group"
-        other: "Product groups"
+        one: "Produto agrupado"
+        other: "Produto agrupado"
       property:
         one: Propriedade
         other: Propriedades
@@ -303,7 +303,7 @@ pt-BR:
   continue: Continue
   continue_shopping: "Continue sua compra"
   copy_all_mails_to: Copiar todos os emails para
-  cost_price: "Cost Price"
+  cost_price: "Preço promocional"
   count: Count
   count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: País
@@ -508,7 +508,7 @@ pt-BR:
   no_items_in_cart: "Nr. de itens no carrinho"
   no_match_found: "Nada encontrado"
   no_payment_methods_available: "Can't check out, no payment methods are configured for this environment"
-  no_products_found: "No products found"
+  no_products_found: "Nenhum produto encontrado"
   no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "Nenhum usuário encontrado com esse endereço de email"
   none: Nenhum
@@ -735,9 +735,9 @@ pt-BR:
   reset_password: "Reiniciar minha senha"
   resource_controller:
     member_object_not_found: "Member object not found."
-    successfully_created: "Successfully created!"
-    successfully_removed: "Successfully removed!"
-    successfully_updated: "Successfully updated!"
+    successfully_created: "Criado com sucesso!"
+    successfully_removed: "Removido com sucesso!"
+    successfully_updated: "Atualizado com sucesso!"
   response_code: "Código de Resposta"
   resume: "continuar"
   resumed: Continuado

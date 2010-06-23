@@ -60,3 +60,4 @@ class StaticContentExtension < Spree::Extension
     end
   end
 end
+

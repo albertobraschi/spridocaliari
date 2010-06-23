@@ -1,0 +1,63 @@
+
+<% content_for :head do %>
+<script type="text/javascript" src="/highslide/highslide-with-gallery.js"></script>
+<link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+
+  <script type="text/javascript" charset="utf-8">
+hs.graphicsDir = '/highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+hs.numberPosition = 'caption';
+hs.dimmingOpacity = 0.75;
+
+// Add the controlbar
+if (hs.addSlideshow) hs.addSlideshow({
+	//slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: .75,
+		position: 'bottom center',
+		hideOnMouseOut: true
+	}
+});
+</script>
+<% end %>
+
+<!-- no need for thumnails unless there is more then one image -->
+<% if product.images.size > 1 %>
+<div class="more-views">
+    <div class="highslide-gallery">
+    <ul>
+    <% product.images.each do |i| %>
+      <li><%= link_to(image_tag(i.attachment.url(:mini)), i.attachment.url(:original), :class=>"highslide", :onclick=>"return hs.expand(this)") %></li>
+    <% end %>
+  </ul>
+  </div>
+</div>
+<% end %>
+
+<% if @product.has_variants?
+  has_checked = false %>
+  <h4 id="variant-images">
+    <%= t('images_for') %>:
+    <span><%= @selected_variant.options_text %></span>
+  </h4>
+  <ul id="variant-thumbnails" class="thumbnails">
+    <% @variants.each do |v|
+        checked = !has_checked && (v.available?)
+   		  has_checked = true if checked
+
+        if checked
+          v.images.each do |i| %>
+            <li><%= link_to(image_tag(i.attachment.url(:mini)), i.attachment.url(:product)) %></li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+<% end %>
+

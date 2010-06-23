@@ -1,0 +1,86 @@
+--- !ruby/object:Gem::Specification 
+name: activerecord-tableless
+version: !ruby/object:Gem::Version 
+  hash: 27
+  prerelease: false
+  segments: 
+  - 0
+  - 1
+  - 0
+  version: 0.1.0
+platform: ruby
+authors: 
+- Kenneth Kalmer
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2008-04-30 00:00:00 -03:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: activerecord
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+description: ActiveRecord Tableless Models provides a simple mixin for creating models that are not bound to the database. This approach is mostly useful for capitalizing on the features ActiveRecord::Validation
+email: kenneth.kalmer@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README
+- CHANGELOG
+files: 
+- init.rb
+- lib/tableless.rb
+- Rakefile
+- README
+- CHANGELOG
+has_rdoc: true
+homepage: http://www.opensourcery.co.za/activerecordtableless/
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --main
+- README
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: tablelessmodels
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 2
+summary: A library for implementing tableless ActiveRecord models
+test_files: []
+

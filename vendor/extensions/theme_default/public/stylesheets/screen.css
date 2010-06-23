@@ -218,6 +218,21 @@ div#checkout #checkout_form_address #shipping label.error {
   padding: 0px;
   width: auto;
 }
+.generic_form.contact label.error {
+  color: red;
+  float: left;
+  text-align: left;
+  display: inline-block;
+  top: 0px;
+  font-size: 11px;
+  border: none;
+  padding: 0px;
+  width: 100%;
+}
+.generic_form.contact input.error {
+    border: 1px solid red
+}
+form.busca {width:260px;float:right;padding:0;margin:0;}
 fieldset { margin-bottom: 1em; }
 legend {
   font-size: 150%;
@@ -449,7 +464,7 @@ ul#language-bar li {
 }
 ul#language-bar strong { font-weight: normal; }
 ul#nav-bar {
-  line-height: 50px;
+  line-height: 45px;
   float: right;
   clear: both;
   font-size: 1.2em;
