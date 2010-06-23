@@ -41794,3 +41794,771 @@ Completed in 1626ms (View: 916, DB: 223) | 200 OK [http://caliari.localhost/admi
   [4;35;1mSQL (3.5ms)[0m   [0mSHOW TABLES[0m
   [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mProduct Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.5ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.5ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing Admin::MailSettingsController#edit (for 127.0.0.1 at 2010-06-22 22:42:16) [GET]
+  Parameters: {"action"=>"edit", "controller"=>"admin/mail_settings"}
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/admin/mail_settings/edit') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1068482856') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'user') LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1068482856 ) [0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-06-23 01:42:17', `perishable_token` = 'zTKHE2l6O66RTS5MJY1x', `last_request_at` = '2010-06-23 01:42:17' WHERE `id` = 1068482856[0m
+  [4;36;1mSQL (76.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/admin
+Rendering admin/mail_settings/edit
+Cache hit: Spree::Config ({})
+Rendered admin/shared/_configuration_menu (6.4ms)
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_admin_head (9.7ms)
+Rendered admin/shared/_tabs (76.8ms)
+Completed in 650ms (View: 449, DB: 83) | 200 OK [http://caliari.localhost/admin/mail_settings/edit]
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mShipment Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `shipments`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load IDs For Limited Eager Loading (0.5ms)[0m   [0mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load Including Associations (0.5ms)[0m   [0;1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing Admin::MailSettingsController#update (for 127.0.0.1 at 2010-06-22 22:42:22) [PUT]
+  Parameters: {"action"=>"update", "_method"=>"put", "authenticity_token"=>"NXlyxBUZbz4kxayE2bjB/qNiETCXfwjtQVR0TM/wmew=", "preferences"=>{"mail_port"=>"25", "smtp_username"=>"comercial@octagonoecommerce.com.br", "mail_auth_type"=>"login", "enable_mail_delivery"=>"1", "mails_from"=>"comercial@octagonoecommerce.com.br", "mail_host"=>"mail.octagonoecommerce.com.br", "mail_domain"=>"mail.octagonoecommerce.com.br", "use_mail_queue"=>"0", "smtp_password"=>"[FILTERED]", "order_bcc"=>"comercial@octagonoecommerce.com.br", "mail_bcc"=>"comercial@octagonoecommerce.com.br", "order_from"=>"comercial@octagonoecommerce.com.br", "secure_connection_type"=>"None"}, "controller"=>"admin/mail_settings"}
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mAppConfiguration Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mAppConfiguration Load (0.1ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.1ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/admin/mail_settings') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1068482856') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'user') LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1068482856 ) [0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-06-23 01:42:23', `perishable_token` = 'x4TE0eB2nUaNFBD1KD0J', `last_request_at` = '2010-06-23 01:42:23' WHERE `id` = 1068482856[0m
+  [4;36;1mSQL (33.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAppConfiguration Load (0.1ms)[0m   [0;1mSELECT `configurations`.id FROM `configurations` WHERE (`configurations`.`name` = BINARY 'Default configuration' AND `configurations`.id <> 1) AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+  [4;35;1mPreference Load (45.8ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mail_port')) LIMIT 1[0m
+  [4;36;1mPreference Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `preferences`[0m
+  [4;35;1mPreference Load (0.5ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'smtp_username')) LIMIT 1[0m
+  [4;36;1mPreference Load (0.4ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mail_auth_type')) LIMIT 1[0m
+  [4;35;1mPreference Load (0.5ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'enable_mail_delivery')) LIMIT 1[0m
+  [4;36;1mPreference Load (0.4ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mails_from')) LIMIT 1[0m
+  [4;35;1mPreference Load (0.4ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mail_host')) LIMIT 1[0m
+  [4;36;1mPreference Load (0.5ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mail_domain')) LIMIT 1[0m
+  [4;35;1mPreference Load (0.4ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'use_mail_queue')) LIMIT 1[0m
+  [4;36;1mPreference Update (0.4ms)[0m   [0;1mUPDATE `preferences` SET `updated_at` = '2010-06-23 01:42:23', `value` = '0' WHERE `id` = 243735680[0m
+  [4;35;1mPreference Load (0.4ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'smtp_password')) LIMIT 1[0m
+  [4;36;1mPreference Load (0.4ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'order_bcc')) LIMIT 1[0m
+  [4;35;1mPreference Load (0.5ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'mail_bcc')) LIMIT 1[0m
+  [4;36;1mPreference Load (0.4ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'order_from')) LIMIT 1[0m
+  [4;35;1mPreference Load (0.4ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'secure_connection_type')) LIMIT 1[0m
+  [4;36;1mSQL (37.4ms)[0m   [0;1mCOMMIT[0m
+INFO: Loading mail preferences
+  [4;35;1mPreference Load (0.5ms)[0m   [0mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration' AND (`preferences`.`group_type` IS NULL AND `preferences`.`group_id` IS NULL AND `preferences`.`attribute` = 'enable_mail_delivery')) LIMIT 1[0m
+  [4;36;1mConfiguration Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mConfiguration Load (0.1ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+Cache miss: Spree::Config ({})
+  [4;36;1mPreference Load (39.3ms)[0m   [0;1mSELECT * FROM `preferences` WHERE (`preferences`.owner_id = 1 AND `preferences`.owner_type = 'Configuration') [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`id` = 1) [0m
+Cache write (will save 68.93ms): Spree::Config
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+INFO: Setting mails settings to {:password=>"yawali786", :authentication=>"login", :address=>"mail.octagonoecommerce.com.br", :user_name=>"comercial@octagonoecommerce.com.br", :port=>25, :domain=>"mail.octagonoecommerce.com.br"}
+INFO: Enabling mail delivery
+Redirected to http://caliari.localhost/admin/mail_settings
+Completed in 730ms (DB: 175) | 302 Found [http://caliari.localhost/admin/mail_settings]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mVariant Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `variants`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProduct Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mShipment Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `shipments`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.4ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.5ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing Admin::MailSettingsController#show (for 127.0.0.1 at 2010-06-22 22:42:25) [GET]
+  Parameters: {"action"=>"show", "controller"=>"admin/mail_settings"}
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mAppConfiguration Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
+  [4;36;1mAppConfiguration Load (0.1ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: page_not_exist//admin/mail_settings ({})
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1068482856') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'user') LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1068482856 ) [0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-06-23 01:42:25', `perishable_token` = '7CyQ3eNokABAo3mNY_je', `last_request_at` = '2010-06-23 01:42:25' WHERE `id` = 1068482856[0m
+  [4;35;1mSQL (37.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/admin
+Rendering admin/mail_settings/show
+Cache hit: Spree::Config ({})
+Rendered admin/shared/_configuration_menu (49.9ms)
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_admin_head (9.8ms)
+Rendered admin/shared/_tabs (65.3ms)
+Completed in 765ms (View: 328, DB: 46) | 200 OK [http://caliari.localhost/admin/mail_settings]
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mVariant Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `variants`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProduct Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mShipment Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `shipments`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.5ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.5ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing CheckoutsController#update (for 127.0.0.1 at 2010-06-22 22:42:34) [PUT]
+  Parameters: {"step"=>"address", "order_id"=>"R865017364", "action"=>"update", "_method"=>"put", "authenticity_token"=>"NXlyxBUZbz4kxayE2bjB/qNiETCXfwjtQVR0TM/wmew=", "controller"=>"checkouts", "checkout"=>{"bill_address_attributes"=>{"address1"=>"paraiba 2015", "city"=>"curitiba", "address2"=>"", "zipcode"=>"80630-000", "country_id"=>"28", "lastname"=>"braschi", "id"=>"1072978401", "firstname"=>"alberto", "phone"=>"55 41 3779-0689", "state_id"=>"1061493655"}, "ship_address_attributes"=>{"id"=>"1072978402", "state_id"=>"1061493655"}, "use_billing"=>"1"}}
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mAppConfiguration Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
+  [4;36;1mAppConfiguration Load (0.1ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;35;1mPage Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/orders/R865017364/checkout') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1068482856') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'user') LIMIT 1[0m
+  [4;36;1mroles_users Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1068482856 ) [0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-06-23 01:42:34', `perishable_token` = '8rYU8aKeRqWba52efJft', `last_request_at` = '2010-06-23 01:42:34' WHERE `id` = 1068482856[0m
+  [4;35;1mSQL (26.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mOrder Load (0.1ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+Cache hit: Spree::Config ({})
+  [4;35;1mZone Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `zones`[0m
+  [4;36;1mZone Load (0.2ms)[0m   [0;1mSELECT * FROM `zones` WHERE (`zones`.`name` IS NULL) LIMIT 1[0m
+  [4;35;1mCountry Load (0.3ms)[0m   [0mSELECT * FROM `countries` [0m
+  [4;36;1mCountry Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `countries`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;36;1mCheckout Load (0.4ms)[0m   [0;1mSELECT * FROM `checkouts` WHERE (`checkouts`.order_id = 1069267033) LIMIT 1[0m
+  [4;35;1mCheckout Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `checkouts`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1068482856) [0m
+  [4;36;1mAddress Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `addresses`[0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978398) [0m
+  [4;36;1mAddress Load (0.1ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978402) [0m
+  [4;35;1mAddress Load (0.3ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978397) [0m
+  [4;36;1mAddress Load (0.3ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978401) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 28) [0m
+  [4;36;1mState Load (0.2ms)[0m   [0;1mSELECT * FROM `states` WHERE (`states`.country_id = 28) [0m
+  [4;35;1mState Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `states`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1068482856) [0m
+  [4;35;1mPaymentMethod Load (0.1ms)[0m   [0mSELECT * FROM `payment_methods` WHERE (`payment_methods`.`deleted_at` IS NULL) [0m
+  [4;36;1mPaymentMethod Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `payment_methods`[0m
+  [4;35;1mGateway::Bogus Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `payment_methods`[0m
+  [4;36;1mPaymentMethod::Check Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `payment_methods`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1068482856) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978398) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978397) [0m
+  [4;35;1mShipment Load (14.4ms)[0m   [0mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) ORDER BY shipments.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mState Load (0.3ms)[0m   [0mSELECT * FROM `states` WHERE (`states`.`id` = 1061493655) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `states` WHERE (`states`.`id` = 1061493655) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 28) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mLineItem Load (0.1ms)[0m   [0mSELECT * FROM `line_items` WHERE (`line_items`.order_id = 1069267033) [0m
+  [4;36;1mLineItem Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `line_items`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVariant Load (0.1ms)[0m   [0;1mSELECT * FROM `variants` WHERE (`variants`.`id` = 381254278) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;36;1mShipment Load (0.5ms)[0m   [0;1mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAdjustment Load (0.4ms)[0m   [0;1mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) ORDER BY position[0m
+  [4;35;1mAdjustment Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `adjustments`[0m
+  [4;36;1mTaxCharge Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `adjustments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCharge Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `adjustments`[0m
+  [4;36;1mCharge Load (0.1ms)[0m   [0;1mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Charge' OR `adjustments`.`type` = 'TaxCharge' OR `adjustments`.`type` = 'ShippingCharge' ) ) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) ORDER BY shipments.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978402) [0m
+  [4;35;1mZone Load (0.1ms)[0m   [0mSELECT * FROM `zones` [0m
+  [4;36;1mZoneMember Load (13.2ms)[0m   [0;1mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 1) [0m
+  [4;35;1mZoneMember Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `zone_members`[0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 28) [0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 96) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 188) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 163) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 52) [0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 117) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 68) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 162) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 20) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 90) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 184) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 53) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 116) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 142) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 62) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 110) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 183) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 213) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 30) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 74) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 51) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 125) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 167) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 194) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 98) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 67) [0m
+  [4;35;1mZoneMember Load (0.1ms)[0m   [0mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 2) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 214) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 35) [0m
+  [4;36;1mCredit Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `adjustments`[0m
+  [4;35;1mCredit Load (0.1ms)[0m   [0mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Credit' OR `adjustments`.`type` = 'CouponCredit' OR `adjustments`.`type` = 'ReturnAuthorizationCredit' ) ) ORDER BY position[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `checkouts` WHERE (`checkouts`.order_id = 1069267033) LIMIT 1[0m
+  [4;35;1mPayment Load (22.6ms)[0m   [0mSELECT * FROM `payments` WHERE (`payments`.payable_id = 1069267033 AND `payments`.payable_type = 'Order') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Charge' OR `adjustments`.`type` = 'TaxCharge' OR `adjustments`.`type` = 'ShippingCharge' ) ) ORDER BY position[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) ORDER BY shipments.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978402) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `zones` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 96) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 188) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 163) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 117) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 68) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 162) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 184) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 53) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 116) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 142) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 62) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 183) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 213) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 74) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 51) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 125) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 167) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 194) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 98) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 67) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 214) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 35) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Credit' OR `adjustments`.`type` = 'CouponCredit' OR `adjustments`.`type` = 'ReturnAuthorizationCredit' ) ) ORDER BY position[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978402) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978401) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1068482856) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978398) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978397) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) ORDER BY shipments.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCheckout Update (0.4ms)[0m   [0mUPDATE `checkouts` SET `updated_at` = '2010-06-23 01:42:35', `state` = 'confirm' WHERE `id` = 1071479361[0m
+  [4;36;1mSQL (57.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/spree_application
+Rendering checkouts/edit
+  [4;35;1mPaymentMethod Load (0.2ms)[0m   [0mSELECT * FROM `payment_methods` WHERE (`payment_methods`.`environment` = 'development' AND `payment_methods`.`active` = 1) AND (`payment_methods`.`deleted_at` IS NULL) LIMIT 1[0m
+  [4;36;1mCharge Load (0.2ms)[0m   [0;1mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Charge' OR `adjustments`.`type` = 'TaxCharge' OR `adjustments`.`type` = 'ShippingCharge' ) ) ORDER BY position[0m
+  [4;35;1mOrder Load (0.1ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) [0m
+  [4;35;1mShipment Load (0.2ms)[0m   [0mSELECT * FROM `shipments` WHERE (`shipments`.order_id = 1069267033) ORDER BY shipments.id DESC LIMIT 1[0m
+  [4;36;1mAddress Load (0.1ms)[0m   [0;1mSELECT * FROM `addresses` WHERE (`addresses`.`id` = 1072978402) [0m
+  [4;35;1mZone Load (0.1ms)[0m   [0mSELECT * FROM `zones` [0m
+  [4;36;1mZoneMember Load (0.1ms)[0m   [0;1mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 1) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 13) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 28) [0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 96) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 188) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 163) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 52) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 117) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 68) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 162) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 20) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 90) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 184) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 53) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 116) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 142) [0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 62) [0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 110) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 183) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 213) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 30) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 74) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 51) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 125) [0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 167) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 194) [0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 98) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 67) [0m
+  [4;36;1mZoneMember Load (0.2ms)[0m   [0;1mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 2) [0m
+  [4;35;1mCountry Load (0.2ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 214) [0m
+  [4;36;1mCountry Load (0.2ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 35) [0m
+  [4;35;1mCredit Load (0.1ms)[0m   [0mSELECT * FROM `adjustments` WHERE (`adjustments`.order_id = 1069267033) AND ( (`adjustments`.`type` = 'Credit' OR `adjustments`.`type` = 'CouponCredit' OR `adjustments`.`type` = 'ReturnAuthorizationCredit' ) ) ORDER BY position[0m
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+Rendered checkouts/_summary (62.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`number` = 'R865017364') LIMIT 1[0m
+  [4;36;1mLineItem Load (0.2ms)[0m   [0;1mSELECT * FROM `line_items` WHERE (`line_items`.order_id = 1069267033) [0m
+  [4;35;1mVariant Load (0.2ms)[0m   [0mSELECT * FROM `variants` WHERE (`variants`.`id` = 381254278) [0m
+  [4;36;1mProduct Load (0.1ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 706676762) [0m
+  [4;35;1moption_values_variants Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `option_values_variants`[0m
+  [4;36;1mOptionValue Load (0.1ms)[0m   [0;1mSELECT * FROM `option_values` INNER JOIN `option_values_variants` ON `option_values`.id = `option_values_variants`.option_value_id WHERE (`option_values_variants`.variant_id = 381254278 ) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `zones` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 96) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 188) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 163) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 117) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 68) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 162) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 90) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 184) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 53) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 116) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 142) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 62) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 110) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 183) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 213) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 74) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 51) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 125) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 167) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 194) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 98) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 67) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `zone_members` WHERE (`zone_members`.zone_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`id` = 214) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`id` = 35) [0m
+Rendered shared/_order_details (70.9ms)
+Rendered checkouts/_confirm (81.1ms)
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_head (3.3ms)
+Rendered shared/_login_bar (1.8ms)
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `line_items` WHERE (`line_items`.order_id = 1069267033) [0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_store_menu (6.8ms)
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProperty Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `properties`[0m
+  [4;35;1mProperty Load (0.2ms)[0m   [0mSELECT * FROM `properties` WHERE (`properties`.`name` = 'brand') LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTaxon Load (0.2ms)[0m   [0mSELECT * FROM `taxons` WHERE (`taxons`.`parent_id` IS NULL) ORDER BY `lft`[0m
+  [4;36;1mTaxon Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `taxons`[0m
+Rendered shared/_search (219.8ms)
+Rendered shared/_nav_bar (246.1ms)
+Cache hit: Spree::Config ({})
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (show_in_header = 1) ORDER BY position[0m
+  [4;36;1mTracker Load (0.2ms)[0m   [0;1mSELECT * FROM `trackers` WHERE (`trackers`.`environment` = 'development' AND `trackers`.`active` = 1) LIMIT 1[0m
+Rendered shared/_google_analytics (16.4ms)
+Rendered shared/_footer (24.4ms)
+Completed in 1839ms (View: 727, DB: 174) | 200 OK [http://caliari.localhost/orders/R865017364/checkout]
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mShipment Columns (6.1ms)[0m   [0;1mSHOW FIELDS FROM `shipments`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.6ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.6ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing ContentController#show (for 127.0.0.1 at 2010-06-22 22:42:38) [GET]
+  Parameters: {"action"=>"show", "path"=>["javascripts", "localization", "messages_pt.js"], "controller"=>"content"}
+
+
+Processing ContentController#show (for 127.0.0.1 at 2010-06-22 22:42:38) [GET]
+  Parameters: {"action"=>"show", "path"=>["stylesheets", "facebox.css"], "controller"=>"content"}
+Cache hit: Spree::Config ({})
+  [4;36;1mPage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.8ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/javascripts/localization/messages_pt.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'javascripts/localization/messages_pt.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+Rendering /var/www/caliari/public/404.html (404)
+Completed in 99ms (View: 4, DB: 6) | 404 Not Found [http://caliari.localhost/javascripts/localization/messages_pt.js]
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.4ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.4ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+
+
+Processing StatesController#index to js (for 127.0.0.1 at 2010-06-22 22:42:38) [GET]
+  Parameters: {"format"=>"js", "action"=>"index", "controller"=>"states"}
+Cache hit: Spree::Config ({})
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.9ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/states.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mState Load (6.4ms)[0m   [0;1mSELECT * FROM `states` [0m
+  [4;35;1mState Load (0.2ms)[0m   [0mSELECT * FROM `states` ORDER BY name ASC[0m
+  [4;36;1mState Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `states`[0m
+  [4;36;1mAppConfiguration Columns (6.5ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mAppConfiguration Load (5.4ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mPage Columns (6.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/stylesheets/facebox.css') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mPage Load (8.5ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'stylesheets/facebox.css') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+Rendering /var/www/caliari/public/404.html (404)
+Completed in 749ms (View: 3, DB: 36) | 404 Not Found [http://caliari.localhost/stylesheets/facebox.css]
+Rendering states/index
+Completed in 530ms (View: 312, DB: 19) | 200 OK [http://caliari.localhost/states.js]
+  [4;35;1mSQL (3.2ms)[0m   [0mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (5.3ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (11.3ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing InquiriesController#index (for 127.0.0.1 at 2010-06-22 22:42:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"inquiries"}
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Redirected to http://caliari.localhost/contact/new
+Completed in 85ms (DB: 23) | 302 Found [http://caliari.localhost/contact]
+  [4;35;1mSQL (9.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (6.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (7.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mShipment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `shipments`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mVariant Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `variants`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRole Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load IDs For Limited Eager Loading (0.5ms)[0m   [0mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load Including Associations (0.3ms)[0m   [0;1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing ContentController#show (for 127.0.0.1 at 2010-06-22 22:42:42) [GET]
+  Parameters: {"action"=>"show", "path"=>["javascripts", "localization", "messages_pt.js"], "controller"=>"content"}
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProduct Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mOrder Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `orders`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;35;1mShipment Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `shipments`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRole Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mUser Load IDs For Limited Eager Loading (0.2ms)[0m   [0;1mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load Including Associations (0.1ms)[0m   [0mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+  [4;36;1mAppConfiguration Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mAppConfiguration Load (0.2ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+
+
+Processing InquiriesController#new (for 127.0.0.1 at 2010-06-22 22:42:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"inquiries"}
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/javascripts/localization/messages_pt.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'javascripts/localization/messages_pt.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+Rendering /var/www/caliari/public/404.html (404)
+Completed in 375ms (View: 2, DB: 10) | 404 Not Found [http://caliari.localhost/javascripts/localization/messages_pt.js]
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mAppConfiguration Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `configurations`[0m
+  [4;36;1mAppConfiguration Load (0.2ms)[0m   [0;1mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  [4;35;1mInquiry Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `inquiries`[0m
+Rendering template within layouts/spree_application
+Rendering inquiries/new
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_head (3.9ms)
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1068482856') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'user') LIMIT 1[0m
+  [4;35;1mroles_users Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` INNER JOIN `roles_users` ON `roles`.id = `roles_users`.role_id WHERE (`roles_users`.user_id = 1068482856 ) [0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-06-23 01:42:43', `perishable_token` = 'KneA9aLI6s4kvM84m42Y', `last_request_at` = '2010-06-23 01:42:43' WHERE `id` = 1068482856[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (81.3ms)[0m   [0;1mCOMMIT[0m
+Rendered shared/_login_bar (124.2ms)
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `orders` WHERE (`orders`.`id` = 1069267033) LIMIT 1[0m
+  [4;35;1mLineItem Load (0.2ms)[0m   [0mSELECT * FROM `line_items` WHERE (`line_items`.order_id = 1069267033) [0m
+  [4;36;1mLineItem Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `line_items`[0m
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+Rendered shared/_store_menu (478.5ms)
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProperty Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `properties`[0m
+  [4;35;1mProperty Load (0.2ms)[0m   [0mSELECT * FROM `properties` WHERE (`properties`.`name` = 'brand') LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTaxon Load (0.2ms)[0m   [0mSELECT * FROM `taxons` WHERE (`taxons`.`parent_id` IS NULL) ORDER BY `lft`[0m
+  [4;36;1mTaxon Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `taxons`[0m
+Rendered shared/_search (65.5ms)
+Rendered shared/_nav_bar (687.7ms)
+Cache hit: Spree::Config ({})
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (show_in_header = 1) ORDER BY position[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mTracker Load (0.2ms)[0m   [0;1mSELECT * FROM `trackers` WHERE (`trackers`.`environment` = 'development' AND `trackers`.`active` = 1) LIMIT 1[0m
+Rendered shared/_google_analytics (261.8ms)
+Rendered shared/_footer (286.2ms)
+Completed in 1522ms (View: 1111, DB: 98) | 200 OK [http://caliari.localhost/contact/new]
+  [4;36;1mSQL (31.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mOrder Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `orders`[0m
+  [4;36;1mShipment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `shipments`[0m
+
+
+Processing ContentController#show (for 127.0.0.1 at 2010-06-22 22:42:47) [GET]
+  Parameters: {"action"=>"show", "path"=>["stylesheets", "facebox.css"], "controller"=>"content"}
+  [4;36;1mShipment Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `shipments`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mUser Load IDs For Limited Eager Loading (0.7ms)[0m   [0mSELECT DISTINCT `users`.id FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load Including Associations (0.8ms)[0m   [0;1mSELECT `users`.`id` AS t0_r0, `users`.`email` AS t0_r1, `users`.`crypted_password` AS t0_r2, `users`.`salt` AS t0_r3, `users`.`remember_token` AS t0_r4, `users`.`remember_token_expires_at` AS t0_r5, `users`.`created_at` AS t0_r6, `users`.`updated_at` AS t0_r7, `users`.`persistence_token` AS t0_r8, `users`.`single_access_token` AS t0_r9, `users`.`perishable_token` AS t0_r10, `users`.`login_count` AS t0_r11, `users`.`failed_login_count` AS t0_r12, `users`.`last_request_at` AS t0_r13, `users`.`current_login_at` AS t0_r14, `users`.`last_login_at` AS t0_r15, `users`.`current_login_ip` AS t0_r16, `users`.`last_login_ip` AS t0_r17, `users`.`login` AS t0_r18, `users`.`ship_address_id` AS t0_r19, `users`.`bill_address_id` AS t0_r20, `users`.`openid_identifier` AS t0_r21, `users`.`api_key` AS t0_r22, `roles`.`id` AS t1_r0, `roles`.`name` AS t1_r1 FROM `users` LEFT OUTER JOIN `roles_users` ON `roles_users`.user_id = `users`.id LEFT OUTER JOIN `roles` ON `roles`.id = `roles_users`.role_id WHERE (roles.name = 'admin') AND `users`.id IN (1068482856) [0m
+
+
+Processing ContentController#show (for 127.0.0.1 at 2010-06-22 22:42:47) [GET]
+  Parameters: {"action"=>"show", "path"=>["javascripts", "localization", "messages_pt.js"], "controller"=>"content"}
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mAppConfiguration Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;35;1mAppConfiguration Load (0.2ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.7ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = '/stylesheets/facebox.css') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+  [4;36;1mAppConfiguration Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `configurations`[0m
+  [4;36;1mPage Load (0.1ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'stylesheets/facebox.css') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+Rendering /var/www/caliari/public/404.html (404)
+  [4;35;1mAppConfiguration Load (0.1ms)[0m   [0mSELECT * FROM `configurations` WHERE (`configurations`.`name` = 'Default configuration') AND ( (`configurations`.`type` = 'AppConfiguration' ) ) LIMIT 1[0m
+Cache hit: Spree::Config ({})
+Cache hit: page_not_exist//javascripts/localization/messages_pt.js ({})
+Completed in 612ms (View: 3, DB: 6) | 404 Not Found [http://caliari.localhost/stylesheets/facebox.css]
+  [4;36;1mPage Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`slug` = 'javascripts/localization/messages_pt.js') AND (`pages`.`visible` = 1) ORDER BY position ASC LIMIT 1[0m
+Rendering /var/www/caliari/public/404.html (404)
+Completed in 635ms (View: 3, DB: 10) | 404 Not Found [http://caliari.localhost/javascripts/localization/messages_pt.js]
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mVariant Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `variants`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mVariant Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `variants`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mProduct Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
